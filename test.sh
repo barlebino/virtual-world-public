@@ -9,14 +9,14 @@ cd ../../glfw
 unzip glfw-3.2.1.zip
 rm glfw-3.2.1.zip
 cd glfw-3.2.1
-/Applications/nondefaults/programming/cmake.app/Contents/bin/cmake CMakeLists.txt
+cmake CMakeLists.txt
 cd ../../glm
 unzip glm-0.9.8.1.zip
 rm glm-0.9.8.1.zip
 cd ../..
 mkdir build
 cd build
-/Applications/nondefaults/programming/cmake.app/Contents/bin/cmake ..
+cmake ..
 make
 ./lab5 ../resources
 cd ..
