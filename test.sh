@@ -7,8 +7,8 @@ cd glew-2.1.0
 make
 cd ../../glfw
 unzip glfw-3.2.1.zip
-rm glew-3.2.1.zip
-cd glew-3.2.1
+rm glfw-3.2.1.zip
+cd glfw-3.2.1
 cmake CMakeLists.txt
 cd ../../glm
 unzip glm-0.9.8.1.zip
