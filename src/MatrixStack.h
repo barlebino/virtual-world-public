@@ -5,10 +5,13 @@
 #include <stack>
 #include <memory>
 
-#include "glm/glm.hpp"
+/* #include "glm/glm.hpp"
 #include "glm/vec4.hpp"
 #include "glm/mat4x4.hpp"
-#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/matrix_transform.hpp" */
+#include "../gl/glm/glm/glm/glm.hpp"
+#include "../gl/glm/glm/glm/mat4x4.hpp"
+#include "../gl/glm/glm/glm/gtc/matrix_transform.hpp"
 //#include "vector_angle.hpp"
 //#include "component_wise.hpp"
 

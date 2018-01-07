@@ -9,7 +9,8 @@
 #define __GLSL__
 
 #define GLEW_STATIC
-#include <GL/glew.h>
+// #include <GL/glew.h>
+#include "../gl/glew/glew-2.1.0/include/GL/glew.h"
 
 namespace GLSL {
 
