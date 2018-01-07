@@ -531,11 +531,17 @@ static void render() {
   aspect = width / (float)height;
   mat_perspective = glm::perspective(70.0f, aspect, 0.1f, 100.0f);
 
+  // Issue with width and height being double
+  width = width / 2;
+  height = height / 2;
+
   // Update eye angle
   glfwGetCursorPos(window, &posX, &posY);
   eye_angle.x = eye_angle.x + 
     signPow(((posY / (double) height) - .5), 2) * -1 * 0.01 *
     (posY >= 0 && posY < (double) height && posX >= 0 && posX < (double) width);
+  // printf("posY: %f, height: %f\n", posY, (float) height);
+  // printf("posX: %f, width: %f\n", posX, (float) width);
   if(eye_angle.x > 1)
     eye_angle.x = -1;
   if(eye_angle.x < -1)
@@ -643,6 +649,10 @@ int main(int argc, char **argv) {
     glfwTerminate();
     return -1;
   }
+  /* TESTING */
+  int width, height;
+  glfwGetFramebufferSize(window, &width, &height);
+  printf("width: %d, height: %d\n", width, height);
   // Make the window's context current.
   glfwMakeContextCurrent(window);
   // Initialize GLEW.
