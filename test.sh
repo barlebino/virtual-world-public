@@ -13,6 +13,7 @@ cmake CMakeLists.txt
 cd ../../glm
 unzip glm-0.9.8.1.zip
 rm glm-0.9.8.1.zip
+cd ../..
 mkdir build
 cd build
 cmake ..
