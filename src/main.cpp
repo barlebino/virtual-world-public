@@ -4,14 +4,18 @@
 */
 #include <iostream>
 #define GLEW_STATIC
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+/* #include <GL/glew.h>
+#include <GLFW/glfw3.h> */
+#include "../gl/glew/glew-2.1.0/include/GL/glew.h"
+#include "../gl/glfw/glfw-3.2.1/include/GLFW/glfw3.h"
 
 #include <math.h>
 #include <sys/time.h>
 
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+/* #include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/matrix_transform.hpp> */
+#include "../gl/glm/glm/glm/gtc/type_ptr.hpp"
+#include "../gl/glm/glm/glm/gtc/matrix_transform.hpp"
 
 #include "GLSL.h"
 #include "Program.h"

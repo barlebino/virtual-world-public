@@ -16,7 +16,8 @@ add_executable(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL})
 
 # Get the GLM environment variable. Since GLM is a header-only library, we
 # just need to add it to the include directory.
-set(GLM_INCLUDE_DIR "$ENV{GLM_INCLUDE_DIR}")
+# set(GLM_INCLUDE_DIR "$ENV{GLM_INCLUDE_DIR}")
+set(GLM_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/gl/glm/glm/glm")
 if(NOT GLM_INCLUDE_DIR)
   MESSAGE(FATAL_ERROR "Please point the environment variable GLM_INCLUDE_DIR to the include directory of your GLM installation.")
 endif()
@@ -24,7 +25,8 @@ include_directories(${GLM_INCLUDE_DIR})
 
 # Get the GLFW environment variable. There should be a CMakeLists.txt in the 
 # specified directory.
-set(GLFW_DIR "$ENV{GLFW_DIR}")
+# set(GLFW_DIR "$ENV{GLFW_DIR}")
+set(GLFW_DIR "${CMAKE_CURRENT_SOURCE_DIR}/gl/glfw/glfw-3.2.1")
 if(NOT GLFW_DIR)
   message(FATAL_ERROR "Please point the environment variable GLFW_DIR to the root directory of your GLFW3 installation.")
 endif()
@@ -40,7 +42,8 @@ include_directories(${GLFW_DIR}/include)
 target_link_libraries(${CMAKE_PROJECT_NAME} glfw ${GLFW_LIBRARIES})
 
 # Get the GLEW environment variable.
-set(GLEW_DIR "$ENV{GLEW_DIR}")
+# set(GLEW_DIR "$ENV{GLEW_DIR}")
+set(GLEW_DIR "${CMAKE_CURRENT_SOURCE_DIR}/gl/glew/glew-2.1.0")
 if(NOT GLEW_DIR)
   message(FATAL_ERROR "Please point the environment variable GLEW_DIR to the root directory of your GLEW installation.")
 endif()
